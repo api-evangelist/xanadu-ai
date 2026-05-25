@@ -1,0 +1,444 @@
+aid: xanadu-ai
+name: Xanadu
+description: Xanadu is a Canadian photonic quantum computing company building room-temperature, fault-tolerant, scalable quantum computers based on photonic continuous-variable (CV) and Gaussian boson sampling architectures. Xanadu maintains a large open-source software stack — most notably PennyLane (the cross-platform framework for quantum differentiable programming, quantum chemistry, and quantum machine learning), Catalyst (a JIT/MLIR compiler for hybrid quantum-classical programs), the PennyLane Lightning family of high-performance state-vector and tensor-network simulators, the PennyLane Plugin ecosystem (Qiskit/IBM, AWS Braket, Cirq, Rigetti, IonQ, AQT, Quantinuum, Qulacs, ProjectQ, and Xanadu's own Strawberry Fields), MrMustard, Jet, FlamingPy, The Walrus, Blackbird (the CV quantum assembly language), XIR, and the Xanadu Quantum Codebook. Xanadu hardware milestones include the X8 photonic chip, Borealis (quantum advantage demonstration on a 216-mode programmable Gaussian boson sampler), and Aurora (the first modular, networked photonic quantum computer combining server racks and kilometres of optical fibre). The Xanadu Cloud — the original photonic-hardware-as-a-service offering with REST/Python/CLI access to Borealis and X8 — has been retired (the `xanadu-cloud-client` and Strawberry Fields repos are archived), and Xanadu's developer-facing surface today centres on the PennyLane Python ecosystem and hardware execution via PennyLane plugins against partner cloud platforms.
+url: https://raw.githubusercontent.com/api-evangelist/xanadu-ai/refs/heads/main/apis.yml
+humanURL: https://www.xanadu.ai
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+created: '2026-05-25'
+modified: '2026-05-25'
+specificationVersion: '0.18'
+tags:
+- Quantum Computing
+- Photonic Quantum
+- Quantum Machine Learning
+- Quantum Chemistry
+- Differentiable Programming
+- PennyLane
+- Open Source
+- Compilers
+- Simulators
+- Continuous Variable
+- Gaussian Boson Sampling
+- Fault Tolerance
+kind: contract
+access: 3rd-Party
+apis:
+- aid: xanadu-ai:pennylane
+  name: PennyLane
+  tags:
+  - Quantum Machine Learning
+  - Differentiable Programming
+  - Hybrid
+  - Python
+  humanURL: https://pennylane.ai
+  properties:
+  - type: Documentation
+    url: https://docs.pennylane.ai/en/stable/
+  - type: APIReference
+    url: https://docs.pennylane.ai/en/stable/code/qml.html
+  - type: GitHubRepository
+    url: https://github.com/PennyLaneAI/pennylane
+  - type: SDK
+    url: https://pypi.org/project/PennyLane/
+  - type: Tutorials
+    url: https://pennylane.ai/qml/demonstrations
+  - type: CodeExamples
+    url: https://github.com/PennyLaneAI/demos
+  description: PennyLane is the flagship open-source Python framework for quantum differentiable programming —
+    train and optimize variational quantum circuits with the same automatic differentiation engines used in
+    classical machine learning. PennyLane unifies quantum machine learning, quantum chemistry, and hybrid
+    quantum-classical workflows behind a single device-abstraction API, interoperates with NumPy, PyTorch,
+    JAX, and TensorFlow/Keras, and runs against 40+ simulators and hardware backends through its plugin
+    ecosystem. Apache 2.0 licensed. 3,200+ GitHub stars.
+- aid: xanadu-ai:pennylane-catalyst
+  name: PennyLane Catalyst
+  tags:
+  - Compilers
+  - JIT
+  - MLIR
+  - QIR
+  humanURL: https://docs.pennylane.ai/projects/catalyst
+  properties:
+  - type: Documentation
+    url: https://docs.pennylane.ai/projects/catalyst/en/stable/
+  - type: GitHubRepository
+    url: https://github.com/PennyLaneAI/catalyst
+  - type: SDK
+    url: https://pypi.org/project/PennyLane-Catalyst/
+  description: Catalyst is a JIT compiler for hybrid quantum programs written in PennyLane. The `@qjit` decorator
+    compiles entire quantum-classical workflows — including conditionals, loops, and gradients — to a custom
+    MLIR quantum dialect, then lowers to LLVM and QIR for execution against Lightning, AWS Braket, and an
+    expanding set of QPUs. Apache 2.0.
+- aid: xanadu-ai:pennylane-lightning
+  name: PennyLane Lightning
+  tags:
+  - Simulators
+  - State Vector
+  - Tensor Networks
+  - GPU
+  - HPC
+  humanURL: https://docs.pennylane.ai/projects/lightning
+  properties:
+  - type: Documentation
+    url: https://docs.pennylane.ai/projects/lightning/en/stable/
+  - type: GitHubRepository
+    url: https://github.com/PennyLaneAI/pennylane-lightning
+  - type: SDK
+    url: https://pypi.org/project/PennyLane-Lightning/
+  description: The Lightning plugin family — `lightning.qubit` (C++ CPU), `lightning.gpu` (cuQuantum), and
+    `lightning.kokkos` (multi-architecture HPC) — provides Xanadu's fast state-vector and tensor-network
+    simulators for PennyLane. Designed for 20+ qubit research workflows and HPC integration.
+- aid: xanadu-ai:pennylane-plugins
+  name: PennyLane Plugins
+  tags:
+  - Plugins
+  - Hardware
+  - Devices
+  - Integrations
+  humanURL: https://pennylane.ai/plugins
+  properties:
+  - type: Documentation
+    url: https://pennylane.ai/plugins
+  - type: GitHubRepository
+    url: https://github.com/PennyLaneAI/pennylane-qiskit
+  - type: GitHubRepository
+    url: https://github.com/PennyLaneAI/pennylane-cirq
+  - type: GitHubRepository
+    url: https://github.com/PennyLaneAI/pennylane-rigetti
+  - type: GitHubRepository
+    url: https://github.com/PennyLaneAI/PennyLane-IonQ
+  - type: GitHubRepository
+    url: https://github.com/PennyLaneAI/pennylane-aqt
+  - type: GitHubRepository
+    url: https://github.com/PennyLaneAI/pennylane-honeywell
+  - type: GitHubRepository
+    url: https://github.com/PennyLaneAI/pennylane-qulacs
+  - type: GitHubRepository
+    url: https://github.com/PennyLaneAI/pennylane-pq
+  - type: GitHubRepository
+    url: https://github.com/PennyLaneAI/PennyLane-qsharp
+  - type: GitHubRepository
+    url: https://github.com/PennyLaneAI/pennylane-orquestra
+  - type: GitHubRepository
+    url: https://github.com/PennyLaneAI/pennylane-sf
+  description: The PennyLane plugin layer exposes a uniform `qml.device` interface across third-party quantum
+    SDKs and QPU clouds — IBM Qiskit / IBM Quantum, AWS Braket, Google Cirq, Rigetti Forest, IonQ, AQT,
+    Quantinuum (Honeywell), Microsoft QDK / Q#, Qulacs, ProjectQ, Zapata Orquestra, and Xanadu Strawberry
+    Fields. Each plugin is a separate pip-installable Python package.
+- aid: xanadu-ai:pennylane-qchem
+  name: PennyLane Quantum Chemistry (qchem)
+  tags:
+  - Quantum Chemistry
+  - VQE
+  - Hamiltonian
+  - Molecules
+  humanURL: https://docs.pennylane.ai/en/stable/code/qml_qchem.html
+  properties:
+  - type: Documentation
+    url: https://docs.pennylane.ai/en/stable/code/qml_qchem.html
+  - type: Tutorials
+    url: https://pennylane.ai/qml/whatisqchem
+  description: `qml.qchem` is PennyLane's quantum chemistry submodule for constructing molecular Hamiltonians,
+    differentiable Hartree-Fock, VQE workflows, and resource estimation against fault-tolerant algorithms,
+    integrated with PennyLane's autodiff stack.
+- aid: xanadu-ai:pennylane-datasets
+  name: PennyLane Datasets
+  tags:
+  - Datasets
+  - Benchmarks
+  humanURL: https://pennylane.ai/datasets
+  properties:
+  - type: Documentation
+    url: https://pennylane.ai/datasets
+  - type: APIReference
+    url: https://docs.pennylane.ai/en/stable/code/qml_data.html
+  - type: GitHubRepository
+    url: https://github.com/PennyLaneAI/DatasetsSource
+  description: A curated catalogue of pre-computed quantum datasets — molecular Hamiltonians, spin systems,
+    QML benchmarks — accessible via `qml.data.load(...)` for reproducible experiments and education.
+- aid: xanadu-ai:strawberry-fields
+  name: Strawberry Fields
+  tags:
+  - Photonic
+  - Continuous Variable
+  - Simulators
+  - Archived
+  humanURL: https://strawberryfields.ai
+  properties:
+  - type: Documentation
+    url: https://strawberryfields.ai/photonics/
+  - type: GitHubRepository
+    url: https://github.com/XanaduAI/strawberryfields
+  - type: SDK
+    url: https://pypi.org/project/StrawberryFields/
+  description: Strawberry Fields is Xanadu's full-stack Python library for designing, simulating, and optimizing
+    continuous-variable (CV) photonic quantum circuits. Historically the bridge from Python to Xanadu's X8 and
+    Borealis hardware via the Xanadu Cloud. The repository is now archived following the Xanadu Cloud
+    retirement; remains useful as an educational/simulator stack for CV quantum optics.
+- aid: xanadu-ai:mrmustard
+  name: MrMustard
+  tags:
+  - Photonic
+  - Continuous Variable
+  - Differentiable
+  - Phase Space
+  humanURL: https://mrmustard.readthedocs.io
+  properties:
+  - type: Documentation
+    url: https://mrmustard.readthedocs.io/en/latest/
+  - type: GitHubRepository
+    url: https://github.com/XanaduAI/MrMustard
+  - type: SDK
+    url: https://pypi.org/project/mrmustard/
+  description: MrMustard is a differentiable simulator that acts as a bridge between phase-space and Fock-space
+    representations of bosonic / CV quantum systems. Built for design and optimization of photonic circuits with
+    gradient-based methods.
+- aid: xanadu-ai:thewalrus
+  name: The Walrus
+  tags:
+  - Hafnians
+  - Gaussian Boson Sampling
+  - Numerical Library
+  humanURL: https://the-walrus.readthedocs.io
+  properties:
+  - type: Documentation
+    url: https://the-walrus.readthedocs.io/en/latest/
+  - type: GitHubRepository
+    url: https://github.com/XanaduAI/thewalrus
+  - type: SDK
+    url: https://pypi.org/project/thewalrus/
+  description: The Walrus is a high-performance C++/Python library for computing hafnians, loop hafnians,
+    Hermite polynomials, and Gaussian boson sampling probabilities — the numerical backbone underpinning
+    Xanadu's photonic simulations.
+- aid: xanadu-ai:jet
+  name: Jet
+  tags:
+  - Tensor Networks
+  - Simulators
+  - C++
+  humanURL: https://quantum-jet.readthedocs.io
+  properties:
+  - type: Documentation
+    url: https://quantum-jet.readthedocs.io/en/latest/
+  - type: GitHubRepository
+    url: https://github.com/XanaduAI/jet
+  description: Jet is a cross-platform C++ library for simulating quantum circuits via tensor-network
+    contractions, with task-based parallelism for HPC-scale workloads.
+- aid: xanadu-ai:flamingpy
+  name: FlamingPy
+  tags:
+  - Error Correction
+  - Fault Tolerance
+  - GKP
+  - Archived
+  humanURL: https://flamingpy.readthedocs.io
+  properties:
+  - type: Documentation
+    url: https://flamingpy.readthedocs.io/en/latest/
+  - type: GitHubRepository
+    url: https://github.com/XanaduAI/flamingpy
+  description: FlamingPy is a Python library with multiple backends for efficient simulation of error correction
+    in fault-tolerant photonic quantum architectures, including GKP-encoded qubit cluster states. Archived.
+- aid: xanadu-ai:blackbird
+  name: Blackbird Language
+  tags:
+  - Quantum Assembly
+  - Continuous Variable
+  - Programming Language
+  humanURL: https://strawberryfields.ai/photonics/blackbird/
+  properties:
+  - type: Documentation
+    url: https://quantum-blackbird.readthedocs.io/en/latest/
+  - type: GitHubRepository
+    url: https://github.com/XanaduAI/blackbird
+  description: Blackbird is Xanadu's quantum assembly language for continuous-variable photonic quantum
+    computation. Programs target Strawberry Fields simulators and were historically deployed against the X8 /
+    Borealis hardware via Xanadu Cloud.
+- aid: xanadu-ai:xir
+  name: XIR
+  tags:
+  - Intermediate Representation
+  - Compilers
+  humanURL: https://xir.readthedocs.io
+  properties:
+  - type: Documentation
+    url: https://xir.readthedocs.io/en/latest/
+  - type: GitHubRepository
+    url: https://github.com/XanaduAI/xir
+  description: XIR is an intermediate representation language for quantum circuits, designed to ferry circuits
+    between front-end frameworks (Strawberry Fields, PennyLane) and backend hardware/simulators.
+- aid: xanadu-ai:xanadu-quantum-codebook
+  name: Xanadu Quantum Codebook
+  tags:
+  - Education
+  - Learning
+  - Interactive
+  humanURL: https://pennylane.ai/codebook
+  properties:
+  - type: Documentation
+    url: https://pennylane.ai/codebook
+  - type: GitHubRepository
+    url: https://github.com/XanaduAI/Xanadu-Quantum-Codebook
+  description: An interactive, free, browser-based quantum computing course built on PennyLane. Covers
+    introductory quantum computing, single- and multi-qubit systems, quantum algorithms, and quantum chemistry
+    with executable code cells.
+common:
+- url: https://www.xanadu.ai
+  name: Xanadu Homepage
+  type: Portal
+- url: https://pennylane.ai
+  name: PennyLane Portal
+  type: Portal
+- url: https://docs.pennylane.ai/en/stable/
+  name: PennyLane Docs
+  type: Documentation
+- url: https://docs.pennylane.ai/en/stable/introduction/pennylane.html
+  name: Getting Started with PennyLane
+  type: GettingStarted
+- url: https://github.com/XanaduAI
+  name: Xanadu GitHub Organization
+  type: GitHubOrganization
+- url: https://github.com/PennyLaneAI
+  name: PennyLane GitHub Organization
+  type: GitHubOrganization
+- url: https://pypi.org/project/PennyLane/
+  name: PennyLane on PyPI
+  type: SDK
+- url: https://pennylane.ai/qml/demonstrations
+  name: PennyLane Demonstrations
+  type: Tutorials
+- url: https://pennylane.ai/codebook
+  name: Xanadu Quantum Codebook
+  type: Courses
+- url: https://pennylane.ai/datasets
+  name: PennyLane Datasets
+  type: Resources
+- url: https://pennylane.ai/plugins
+  name: PennyLane Plugins Directory
+  type: Integrations
+- url: https://pennylane.ai/devices
+  name: PennyLane Devices
+  type: Integrations
+- url: https://discuss.pennylane.ai
+  name: PennyLane Discussion Forum
+  type: Support
+- url: https://www.xanadu.ai/blog
+  name: Xanadu Blog
+  type: Blog
+- url: https://pennylane.ai/blog
+  name: PennyLane Blog
+  type: Blog
+- url: https://www.youtube.com/c/XanaduAI
+  name: Xanadu YouTube
+  type: YouTube
+- url: https://www.linkedin.com/company/xanaduai
+  name: Xanadu on LinkedIn
+  type: LinkedIn
+- url: https://twitter.com/XanaduAI
+  name: Xanadu on X
+  type: X
+- url: https://www.xanadu.ai/careers
+  name: Xanadu Careers
+  type: Resources
+- url: https://www.xanadu.ai/qhack
+  name: QHack — Quantum Machine Learning Hackathon
+  type: Events
+- url: https://docs.pennylane.ai/en/stable/development/release_notes.html
+  name: PennyLane Release Notes
+  type: ReleaseNotes
+- url: https://docs.pennylane.ai/en/stable/development/release_notes.html
+  name: PennyLane Changelog
+  type: ChangeLog
+- url: https://github.com/PennyLaneAI/pennylane/blob/master/LICENSE
+  name: Apache License 2.0 (PennyLane)
+  type: Legal
+- url: https://www.xanadu.ai/privacy
+  name: Privacy Policy
+  type: PrivacyPolicy
+- url: https://www.xanadu.ai/terms
+  name: Terms of Service
+  type: TermsOfService
+- name: Features
+  type: Features
+  data:
+  - name: Open-source quantum differentiable programming
+    description: Train variational quantum circuits with PyTorch / JAX / TensorFlow / NumPy autodiff
+      through PennyLane.
+  - name: Hardware-agnostic device API
+    description: Swap between 40+ simulators and QPU backends behind a single `qml.device(...)` interface.
+  - name: JIT compilation of hybrid programs
+    description: Catalyst compiles quantum + classical control flow to MLIR / LLVM / QIR for fast,
+      gradient-aware execution.
+  - name: High-performance simulators
+    description: Lightning (CPU/C++), Lightning-GPU (cuQuantum), Lightning-Kokkos (HPC), and Jet
+      (tensor-network) scale to research-grade workloads.
+  - name: Quantum chemistry built in
+    description: `qml.qchem` provides differentiable Hartree-Fock, VQE, and Hamiltonian construction.
+  - name: Curated datasets and codebook
+    description: PennyLane Datasets and the Xanadu Quantum Codebook deliver standardized benchmarks and an
+      interactive learning curriculum.
+  - name: Photonic continuous-variable tooling
+    description: Strawberry Fields, MrMustard, The Walrus, Blackbird, and FlamingPy form a complete CV
+      photonic stack — simulation, optimization, fault-tolerant codes.
+  - name: Hardware milestones
+    description: X8 (8-mode squeezed-light chip), Borealis (216-mode programmable Gaussian boson sampler;
+      Nature 2022 quantum advantage), Aurora (modular networked photonic computer, 2025).
+- name: UseCases
+  type: UseCases
+  data:
+  - name: Quantum Machine Learning
+    description: Variational classifiers, quantum kernels, generative quantum models, hybrid
+      quantum-classical neural networks.
+  - name: Quantum Chemistry
+    description: Molecular ground-state energies via VQE, differentiable Hartree-Fock, resource estimation
+      for fault-tolerant electronic-structure algorithms.
+  - name: Quantum Algorithm Research
+    description: Rapid prototyping of QAOA, amplitude estimation, quantum signal processing, and
+      error-correction protocols.
+  - name: Hybrid HPC Workloads
+    description: Catalyst + Lightning-GPU / Lightning-Kokkos for scaling hybrid quantum-classical workloads
+      on HPC clusters.
+  - name: Quantum Education
+    description: PennyLane Codebook, demos, and datasets for university courses and self-directed
+      learners.
+  - name: Hardware Benchmarking
+    description: Cross-vendor execution and benchmarking via the plugin ecosystem (IBM, IonQ, Rigetti, AWS
+      Braket, AQT, Quantinuum).
+- name: Integrations
+  type: Integrations
+  data:
+  - name: IBM Quantum / Qiskit
+    description: `pennylane-qiskit` plugin — run circuits on IBM Quantum hardware and Qiskit simulators.
+  - name: AWS Braket
+    description: Amazon Braket plugin — execute on Rigetti, IonQ, OQC, Quera, and the SV1/DM1/TN1 managed
+      simulators.
+  - name: Google Cirq
+    description: `pennylane-cirq` plugin for Cirq simulators and Google Quantum AI workflows.
+  - name: Rigetti Forest
+    description: `pennylane-rigetti` plugin for Rigetti QPUs, QVM, and wavefunction simulator.
+  - name: IonQ
+    description: `PennyLane-IonQ` plugin for IonQ simulators and trapped-ion hardware.
+  - name: AQT (Alpine Quantum Technologies)
+    description: `pennylane-aqt` plugin for AQT ion-trap hardware.
+  - name: Quantinuum (Honeywell)
+    description: `pennylane-honeywell` plugin for Quantinuum / Honeywell ion-trap hardware.
+  - name: Microsoft Q# / QDK
+    description: `PennyLane-qsharp` plugin for the Microsoft Quantum Development Kit full state simulator.
+  - name: Qulacs
+    description: `pennylane-qulacs` plugin — high-performance C++ simulator.
+  - name: ProjectQ
+    description: `pennylane-pq` plugin — IBM, simulator, and classical-simulator devices via ProjectQ.
+  - name: Strawberry Fields
+    description: `pennylane-sf` plugin — drive Xanadu's continuous-variable photonic simulators.
+  - name: PyTorch
+    description: PennyLane's `torch` interface for gradient-based optimization with PyTorch tensors.
+  - name: JAX
+    description: PennyLane's `jax` interface and Catalyst JAX support.
+  - name: TensorFlow / Keras
+    description: PennyLane's `tf` interface for seamless integration with TensorFlow models.
+  - name: NumPy / Autograd
+    description: Default PennyLane interface for classical autodiff with NumPy.
+maintainers:
+- FN: Kin Lane
+  email: info@apievangelist.com
+  url: https://kinlane.com
