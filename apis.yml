@@ -284,6 +284,8 @@ apis:
     introductory quantum computing, single- and multi-qubit systems, quantum algorithms, and quantum chemistry
     with executable code cells.
 common:
+- type: DomainSecurity
+  url: security/xanadu-ai-domain-security.yml
 - url: https://www.xanadu.ai
   name: Xanadu Homepage
   type: Portal
