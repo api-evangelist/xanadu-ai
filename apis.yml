@@ -17,7 +17,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/xanadu-ai.png
 created: '2026-05-25'
 modified: '2026-05-25'
-specificationVersion: '0.18'
+specificationVersion: '0.23'
 tags:
 - Quantum Computing
 - Photonic Quantum
