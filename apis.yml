@@ -25,6 +25,19 @@ tags:
 - Quantum Chemistry
 - Differentiable Programming
 - PennyLane
+- Open-Source
+- Compilers
+- Simulators
+- Continuous Variable
+- Gaussian Boson Sampling
+- Fault Tolerance
+tags_raw:
+- Quantum Computing
+- Photonic Quantum
+- Quantum Machine Learning
+- Quantum Chemistry
+- Differentiable Programming
+- PennyLane
 - Open Source
 - Compilers
 - Simulators
@@ -102,6 +115,11 @@ apis:
 - aid: xanadu-ai:pennylane-plugins
   name: PennyLane Plugins
   tags:
+  - Plugins
+  - Hardware
+  - Devices
+  - Integration
+  tags_raw:
   - Plugins
   - Hardware
   - Devices
