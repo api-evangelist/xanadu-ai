@@ -3,6 +3,19 @@ name: Xanadu
 description: Xanadu is a Canadian photonic quantum computing company building room-temperature, fault-tolerant, scalable quantum computers based on photonic continuous-variable (CV) and Gaussian boson sampling architectures. Xanadu maintains a large open-source software stack — most notably PennyLane (the cross-platform framework for quantum differentiable programming, quantum chemistry, and quantum machine learning), Catalyst (a JIT/MLIR compiler for hybrid quantum-classical programs), the PennyLane Lightning family of high-performance state-vector and tensor-network simulators, the PennyLane Plugin ecosystem (Qiskit/IBM, AWS Braket, Cirq, Rigetti, IonQ, AQT, Quantinuum, Qulacs, ProjectQ, and Xanadu's own Strawberry Fields), MrMustard, Jet, FlamingPy, The Walrus, Blackbird (the CV quantum assembly language), XIR, and the Xanadu Quantum Codebook. Xanadu hardware milestones include the X8 photonic chip, Borealis (quantum advantage demonstration on a 216-mode programmable Gaussian boson sampler), and Aurora (the first modular, networked photonic quantum computer combining server racks and kilometres of optical fibre). The Xanadu Cloud — the original photonic-hardware-as-a-service offering with REST/Python/CLI access to Borealis and X8 — has been retired (the `xanadu-cloud-client` and Strawberry Fields repos are archived), and Xanadu's developer-facing surface today centres on the PennyLane Python ecosystem and hardware execution via PennyLane plugins against partner cloud platforms.
 url: https://raw.githubusercontent.com/api-evangelist/xanadu-ai/refs/heads/main/apis.yml
 humanURL: https://www.xanadu.ai
+deliveryModel:
+  model: open-core
+  license: Apache-2.0
+  open_source: true
+  commercial: true
+  callable_host: false
+  label: Open core · an OSS project plus a commercial hosted product
+  confidence: high
+  source:
+  - license
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
@@ -313,6 +326,14 @@ apis:
     introductory quantum computing, single- and multi-qubit systems, quantum algorithms, and quantum chemistry
     with executable code cells.
 common:
+- type: IssueTracker
+  url: https://github.com/PennyLaneAI/pennylane/issues
+- type: Releases
+  url: https://github.com/PennyLaneAI/pennylane/releases
+- type: CodeOfConduct
+  url: https://github.com/PennyLaneAI/pennylane/blob/main/.github/CODE_OF_CONDUCT.md
+- type: ContributionGuide
+  url: https://github.com/PennyLaneAI/pennylane/blob/main/.github/CONTRIBUTING.md
 - type: License
   name: Apache-2.0
   url: https://github.com/PennyLaneAI/pennylane/blob/main/LICENSE
