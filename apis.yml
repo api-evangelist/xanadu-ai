@@ -326,6 +326,8 @@ apis:
     introductory quantum computing, single- and multi-qubit systems, quantum algorithms, and quantum chemistry
     with executable code cells.
 common:
+- type: Website
+  url: https://www.pennylane.ai/
 - type: IssueTracker
   url: https://github.com/PennyLaneAI/pennylane/issues
 - type: Releases
