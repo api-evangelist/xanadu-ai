@@ -40,7 +40,7 @@ tags:
 - PennyLane
 - Open-Source
 - Compilers
-- Simulators
+- Simulator
 - Continuous Variable
 - Gaussian Boson Sampling
 - Fault Tolerance
@@ -109,6 +109,12 @@ apis:
 - aid: xanadu-ai:pennylane-lightning
   name: PennyLane Lightning
   tags:
+  - Simulator
+  - State Vector
+  - Tensor Networks
+  - GPU
+  - HPC
+  tags_raw:
   - Simulators
   - State Vector
   - Tensor Networks
@@ -204,6 +210,11 @@ apis:
   tags:
   - Photonic
   - Continuous Variable
+  - Simulator
+  - Archived
+  tags_raw:
+  - Photonic
+  - Continuous Variable
   - Simulators
   - Archived
   humanURL: https://strawberryfields.ai
@@ -256,6 +267,10 @@ apis:
 - aid: xanadu-ai:jet
   name: Jet
   tags:
+  - Tensor Networks
+  - Simulator
+  - C++
+  tags_raw:
   - Tensor Networks
   - Simulators
   - C++
